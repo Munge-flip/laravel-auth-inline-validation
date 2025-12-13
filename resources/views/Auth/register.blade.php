@@ -1,3 +1,3 @@
 Register
 
-<a href=" {{ route('Auth.register') }} ">Already have an Account?</a>
+<a href=" {{ route('login') }} ">Already have an Account?</a>
