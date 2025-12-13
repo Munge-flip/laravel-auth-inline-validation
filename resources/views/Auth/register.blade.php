@@ -28,7 +28,7 @@
     </div>
 
     <div>
-    <label for="reg-confirm">Confirm Password</label>
+    <label for="reg-confirm">Confirm Password</label><br>
     <input type="password" name="password_confirmation" required>
     </div>
 
