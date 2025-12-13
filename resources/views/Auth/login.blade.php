@@ -1,5 +1,4 @@
 <form method="POST" action=" {{ route('login') }} ">
-
     @csrf
 
     <h3>Login</h3>

@@ -1,5 +1,4 @@
 <form method="POST" action=" {{ route('register') }} ">
-
     @csrf
 
     <h3>Register</h3>
@@ -22,7 +21,7 @@
 
     <div>
         <label for="reg-password">Password</label><br>
-        <input type="password" name="passwword" required><br>
+        <input type="password" name="password" required><br>
         @error('password')
             <div style="color: red"> {{ $message }} </div>
         @enderror
