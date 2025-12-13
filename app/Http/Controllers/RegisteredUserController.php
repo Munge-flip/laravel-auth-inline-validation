@@ -11,7 +11,7 @@ use Illuminate\Validation\Rules\Password;
 class RegisteredUserController extends Controller
 {
     public function create() {
-        return view ('Auth.register');
+        return view ('auth.register');
     }
     public function store(Request $request) {
         $validated = $request->validate([

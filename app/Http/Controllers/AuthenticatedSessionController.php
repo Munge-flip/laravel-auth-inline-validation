@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class AuthenticatedSessionController extends Controller
 {
     public function create() {
-        return view ('Auth.login');
+        return view ('auth.login');
     }
     public function store(Request $request) {
         $credentials = $request->validate([

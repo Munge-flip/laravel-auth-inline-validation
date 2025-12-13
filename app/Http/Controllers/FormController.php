@@ -7,9 +7,9 @@ use Illuminate\Http\Request;
 class FormController extends Controller
 {
     public function index() {
-        return view ('Forms.index');
+        return view ('forms.index');
     }
     public function create() {
-        return view ('Forms.create');
+        return view ('forms.create');
     }
 }
