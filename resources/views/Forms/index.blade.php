@@ -1,6 +1,6 @@
 this is the index
 
-<a href=" {{ route('form.create') }} " class="btn-primary">Add</a>
+<a href=" {{ route('forms.create') }} " class="btn-primary">Add</a>
 
 <form method="POST" action=" {{ route('logout') }} ">
     @csrf

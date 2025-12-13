@@ -17,7 +17,7 @@ class AuthenticatedSessionController extends Controller
         ]);
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect()->intended(route('form.index'));
+            return redirect()->intended(route('forms.index'));
         }
         return back()->withErrors([
             'email' => 'The provided credentials do not match our records',
