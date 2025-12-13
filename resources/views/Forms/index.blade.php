@@ -1,3 +1,3 @@
 this is the index
 
-<button><a href=" {{ route('form.create') }} ">Add</a></button>
+<a href=" {{ route('form.create') }} " class="btn-primary">Add</a>

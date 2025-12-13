@@ -1,3 +1,3 @@
 this is the create
 
-<button><a href=" {{ route('form.create') }} "></a></button>
+<a href=" {{ route('form.index') }} " class="btn-primary">Back to List</a>
