@@ -1,4 +1,6 @@
-<form method="POST" action="">
+<form method="POST" action=" {{ route('register') }} ">
+
+    @csrf
 
     <h3>Register</h3>
 

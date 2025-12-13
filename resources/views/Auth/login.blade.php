@@ -14,7 +14,7 @@
 
     <div>
         <label for="">Password</label><br>
-        <input type="password" name="passwword" required><br>
+        <input type="password" name="password" required><br>
         @error('password')
         <div style="color: red"> {{ $message }} </div>
         @enderror
