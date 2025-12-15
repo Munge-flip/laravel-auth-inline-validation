@@ -7,10 +7,12 @@ use Illuminate\Http\Request;
 
 class AuthenticatedSessionController extends Controller
 {
-    public function create() {
-        return view ('auth.login');
+    public function create()
+    {
+        return view('auth.login');
     }
-    public function store(Request $request) {
+    public function store(Request $request)
+    {
         $credentials = $request->validate([
             'email' => ['required', 'email'],
             'password' => ['required'],
@@ -19,11 +21,14 @@ class AuthenticatedSessionController extends Controller
             $request->session()->regenerate();
             return redirect()->intended(route('forms.index'));
         }
-        return back()->withErrors([
-            'email' => 'The provided credentials do not match our records',
-        ]);
+        return back()->withErrors(
+            [
+                'email' => 'The credentials do not match our records',
+            ]
+        );
     }
-    public function destroy(Request $request) {
+    public function destroy(Request $request)
+    {
         Auth::logout();
         $request->session()->invalidate();
         $request->session()->regenerateToken();
