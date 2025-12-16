@@ -6,13 +6,13 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules\Password;
-use App\Models\User;
 
 class FormController extends Controller
 {
     public function index()
     {
-        return view('forms.index');
+        $forms = Auth::user()->forms;
+        return view('forms.index', compact('forms'));
     }
     public function create()
     {
