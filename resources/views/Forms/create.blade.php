@@ -1,3 +1,14 @@
-this is the create
+<form method="POST" action="{{route('forms.store')}}">
+    @csrf
+    <div>
+        <label for="username">Username</label><br>
+        <input type="text" name="username" id="username" required>
+    </div>
+    <div>
+        <label for="password">Password</label><br>
+        <input type="password" name="password" id="password" required>
+    </div>
 
-<a href=" {{ route('form.index') }} " class="btn-primary">Back to List</a>
+    <input type="submit" value="Submit">
+</form>
+<a href=" {{ route('forms.index') }} " class="btn-primary">Back to List</a>
