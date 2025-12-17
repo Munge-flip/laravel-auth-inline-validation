@@ -24,7 +24,7 @@
     </div>
     <div>
         <label for="reg-confirm">Confirm Password</label><br>
-        <input type="confirm" name="confirm" id="reg-confirm" required>
+        <input type="password" name="password_confirmation" id="reg-confirm" required>
         @error('password')
         <div class="color: red"> {{$message}} </div>
         @enderror
