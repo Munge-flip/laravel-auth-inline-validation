@@ -11,7 +11,8 @@ class FormController extends Controller
 {
     public function index()
     {
-        return view('forms.index');
+        $forms = Auth::user()->forms;
+        return view('forms.index', compact('forms'));
     }
     public function create()
     {
