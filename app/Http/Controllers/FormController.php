@@ -30,6 +30,12 @@ class FormController extends Controller
         ]);
         return redirect()->route('forms.index');
     }
+    public function show($id)
+    {
+        $form = Auth::user()->forms()->findOrFail($id);
+
+        return view('forms.show', compact('form'));
+    }
     public function edit($id)
     {
         $form = Auth::user()->forms()->findOrFail($id);
@@ -47,6 +53,14 @@ class FormController extends Controller
             'username' => $validated['username'],
             'password' => Hash::make($validated['password']),
         ]);
+        return redirect()->route('forms.index');
+    }
+    public function destroy($id)
+    {
+        $form = Auth::user()->forms()->findOrFail($id);
+
+        $form->delete();
+
         return redirect()->route('forms.index');
     }
 }
