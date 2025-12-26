@@ -8,6 +8,13 @@
         @enderror
     </div>
     <div>
+        <label for="create-password">Password</label><br>
+        <input type="password" name="password" id="create-password" required>
+        @error('password')
+        <div style="color: red"></div>
+        @enderror
+    </div>
+    <div>
         <label for="create-firstName">First Name</label><br>
         <input type="text" name="firstName" id="create-firstName" required>
         @error('firstName')
