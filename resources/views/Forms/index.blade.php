@@ -12,6 +12,11 @@ this is the index
             <th>ID</th>
             <th>Username</th>
             <th>Date Created</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Middle Name</th>
+            <th>Date of birth</th>
+            <th>Favorite Color</th>
             <th>Action</th>
         </tr>
     </thead>
@@ -20,6 +25,11 @@ this is the index
         <td> {{$form->id}} </td>
         <td> {{$form->username}} </td>
         <td> {{$form->created_at->format('M d, Y')}} </td>
+        <td> {{$form->firstName}} </td>
+        <td> {{$form->lastName}} </td>
+        <td> {{$form->middleName}} </td>
+        <td> {{$form->dateOfBirth}} </td>
+        <td> {{$form->color}} </td>
         <td>
             <a href="{{route('forms.edit', $form->id)}}">Edit</a>
             <a href="{{route('forms.show', $form->id)}}">View</a>

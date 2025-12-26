@@ -23,10 +23,20 @@ class FormController extends Controller
         $validated = $request->validate([
             'username' => ['required', 'string', 'max:255'],
             'password' => ['required', Password::defaults()],
+            'firstName' => ['required', 'string', 'max:255'],
+            'lastName' => ['required', 'string', 'max:255'],
+            'middleName' => ['required', 'string', 'max:255'],
+            'dateOfBirth' => ['required', 'date'],
+            'color' => ['required', 'hex_color'],
         ]);
         Auth::user()->forms()->create([
             'username' => $validated['username'],
             'password' => Hash::make($validated['password']),
+            'firstName' => $validated['firstName'],
+            'lastName' => $validated['lastName'],
+            'middleName' => $validated['middleName'],
+            'dateOfBirth' => $validated['dateOfBirth'],
+            'color' => $validated['color'],
         ]);
         return redirect()->route('forms.index');
     }
@@ -46,12 +56,22 @@ class FormController extends Controller
         $validated = $request->validate([
             'username' => ['required', 'string', 'max:255'],
             'password' => ['required', Password::defaults()],
+            'firstName' => ['required', 'string', 'max:255'],
+            'lastName' => ['required', 'string', 'max:255'],
+            'middleName' => ['required', 'string', 'max:255'],
+            'dateOfBirth' => ['required', 'date'],
+            'color' => ['required', 'hex_color'],
         ]);
         $form = Auth::user()->forms()->findOrFail($id);
 
         $form->update([
             'username' => $validated['username'],
             'password' => Hash::make($validated['password']),
+            'firstName' => $validated['firstName'],
+            'lastName' => $validated['lastName'],
+            'middleName' => $validated['middleName'],
+            'dateOfBirth' => $validated['dateOfBirth'],
+            'color' => $validated['color'],
         ]);
         return redirect()->route('forms.index');
     }
