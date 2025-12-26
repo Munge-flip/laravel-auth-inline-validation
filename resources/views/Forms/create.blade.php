@@ -16,35 +16,35 @@
     </div>
     <div>
         <label for="create-firstName">First Name</label><br>
-        <input type="text" name="firstName" id="create-firstName" required>
+        <input type="text" name="firstName" id="create-firstName" value="{{old('firstName')}}" required>
         @error('firstName')
         <div style="color: red"></div>
         @enderror
     </div>
     <div>
         <label for="create-lastName">Last Name</label><br>
-        <input type="text" name="lastName" id="create-lastName" required>
+        <input type="text" name="lastName" id="create-lastName" value="{{old('lastName')}}" required>
         @error('lastName')
         <div style="color: red"></div>
         @enderror
     </div>
     <div>
         <label for="create-middleName">Middle Name</label><br>
-        <input type="text" name="middleName" id="create-middleName" required>
+        <input type="text" name="middleName" id="create-middleName" value="{{old('middleName')}}" required>
         @error('middleName')
         <div style="color: red"></div>
         @enderror
     </div>
     <div>
         <label for="create-dateOfBirth">Date of Birth</label><br>
-        <input type="date" name="dateOfBirth" id="create-dateOfBirth" required>
+        <input type="date" name="dateOfBirth" id="create-dateOfBirth" value="{{old('dateOfBirth')}}" required>
         @error('dateOfBirth')
         <div style="color: red"></div>
         @enderror
     </div>
     <div>
         <label for="create-color">Favorite Color</label><br>
-        <input type="color" name="color" id="create-color" required>
+        <input type="color" name="color" id="create-color" value="{{old('color')}}" required>
         @error('color')
         <div style="color: red"></div>
         @enderror
