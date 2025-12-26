@@ -8,10 +8,12 @@ this is the index
 
 <table border="1">
     <thead>
-        <th>ID</th>
-        <th>Username</th>
-        <th>Date Created</th>
-        <th>Action</th>
+        <tr>
+            <th>ID</th>
+            <th>Username</th>
+            <th>Date Created</th>
+            <th>Action</th>
+        </tr>
     </thead>
     @forelse($forms as $form)
     <tr>
