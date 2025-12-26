@@ -17,6 +17,11 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained()->cascadeOnDelete();
             $table->string('username');
             $table->string('password');
+            $table->string('firstName');
+            $table->string('lastName');
+            $table->string('middleName');
+            $table->date('dateOfBirth');
+            $table->string('color');
             $table->timestamps();
         });
     }
